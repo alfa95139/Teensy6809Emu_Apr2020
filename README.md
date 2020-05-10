@@ -48,16 +48,13 @@ example.asm:
 
         lda     #0
         swi
-
 txt     fcc     "Enter a string (9 chars max): "
 endl    fcb     $0A,0
-
 txt2    fcc     "You entered this string : "
         fcb     0
-
 input   rmb     10
-
         end
+
 
 example.hex:
 
