@@ -5,7 +5,7 @@ Note that this version does not include the disassambler, as I needed to keep th
 Most work was around substituting the code from console.c in the *.ino code.
 Also NOTE: the *.hex code (also avail in the original distro) is NOT what we hardcoded in the *.ino. We had to first read that *.hex from the int6809.c routine.
 
-example.asm:
+vvvvvvvvvvvv BEGIN example.asm CODE vvvvvvvvvvvvvvvvvvvvvv
 
         org     $0
 
@@ -48,6 +48,7 @@ example.asm:
 
         lda     #0
         swi
+
 txt     fcc     "Enter a string (9 chars max): "
 endl    fcb     $0A,0
 txt2    fcc     "You entered this string : "
@@ -55,6 +56,7 @@ txt2    fcc     "You entered this string : "
 input   rmb     10
         end
 
+^^^^^^^^^^^^^^^^^^^^^^^^^^ END example.asm CODE ^^^^^^^^^^^^^^^^^^^^^
 
 
 example.hex:
